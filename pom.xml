@@ -18,32 +18,13 @@
             <groupId>com.marsahlsec</groupId>
             <artifactId>marshalsec</artifactId>
             <version>0.0.3</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/dependencies/marshalsec-0.0.3-SNAPSHOT-all.jar</systemPath>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <configuration>
-                    <groupId>com.marsahlsec</groupId>
-                    <artifactId>marshalsec</artifactId>
-                    <version>0.0.3</version>
-                    <packaging>jar</packaging>
-                    <file>${basedir}/dependencies/marshalsec-0.0.3-SNAPSHOT-all.jar</file>
-                    <generatePom>true</generatePom>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>install-jar-lib</id>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                        <phase>validate</phase>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
