@@ -25,8 +25,8 @@ public class Wrapper {
     public static void main(String[] args) {
         int port = -1;
         if (args.length >= 1 && args[0].indexOf(35) >= 0) {
-            String portStr = System.getProperty("port", "1389");
-            port = Integer.parseInt(portStr);
+            String portStr = System.getenv("PORT");
+            port = portStr == null ? 1389 : Integer.parseInt(portStr);
         } else {
             System.err.println(Wrapper.class.getSimpleName() + " <codebase_url#classname> [<port>]");
             System.exit(-1);
